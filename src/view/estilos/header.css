@@ -1,0 +1,162 @@
+/* ----- ----- ----- ----- ----- Contenedor Header----- ----- ----- ----- ----- */
+
+#lienzo-header {
+    background: #FEFEFE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+body.dark #lienzo-header {
+    background: #222222;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .16);
+}
+
+/* ----- ----- ----- ----- ----- Logo Tipo ----- ----- ----- ----- ----- */
+
+#header-logoTipo {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#header-logoTipo svg {
+    width: 60px;
+    height: 60px;
+}
+
+#header-logoTipo h1 {
+    color: #FF2315;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+}
+
+#header-logoTipo h1:hover {
+    opacity: 75%;
+}
+
+#header-logoTipo h1 span {
+    color: #1273FF;
+}
+
+/* ----- ----- ----- ----- ----- Menu Opciones del Header ----- ----- ----- ----- ----- */
+
+#header-optionsheader {
+    display: flex;
+    align-items: center;
+}
+
+#optionsheader-nombreUsuario {
+    margin-right: 15px;
+    color: #222222;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#optionsheader-nombreUsuario:hover {
+    color:#e9817a;
+}
+
+body.dark #optionsheader-nombreUsuario {
+    color: #C8C8C8;
+}
+
+body.dark #optionsheader-nombreUsuario:hover {
+    color:#FF2315;
+}
+
+/* ----- ----- ----- ----- ----- Switch header ----- ----- ----- ----- ----- */
+
+#optionsheader-switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+#optionsheader-switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+#optionsheader-switch.active {
+    background: #e9817a;
+    color: #000000;
+}
+
+#optionsheader-switch.active::after {
+    right: 0;
+    left: unset;
+  }
+
+#optionsheader-switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #ffffff;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+
+    /* ----- ----- ----- Logo ----- ----- ----- */
+
+    #lienzo-header {
+        padding: 10px 20px;
+    }
+
+    #header-logoTipo {
+        margin-left: 0px;
+    }
+
+    #header-logoTipo svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    #header-logoTipo h1 {
+        margin-left: 5px;
+        font-size: 25px;
+    }
+
+    /* ----- ----- ----- Nombre de Usuario ----- ----- ----- */
+
+    #optionsheader-nombreUsuario {
+        display: none;
+    }
+
+    /* ----- ----- ----- Boton Switch ----- ----- ----- */
+
+    #optionsheader-switch::after {
+        width: 25px;
+        height: 25px;
+    }
+
+    #optionsheader-switch span {
+        width: 25px;
+        height: 25px;
+    }
+}
